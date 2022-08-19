@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <script defer type="module" src="script.js"></script>
+    <title>Prijava požara App</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <img src="clipart3051524.png" alt="Logo" class="logo" />
+
+      <ul class="fires">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Tip intervencije</label>
+            <select class="form__input form__input--type">
+              <option value="open_fire">Požar otvorenog prostora</option> <!--PROMJENA-->
+              <option value="closed_fire">Požar zatvorenog prostora</option> <!--PROMJENA-->
+              <option value="tech_interv">Tehnička intervencija</option> <!--PROMJENA-->
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Ime osobe</label>
+            <input class="form__input form__input--fname" placeholder="Ime" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Prezime osobe</label>
+            <input
+              class="form__input form__input--lname"
+              placeholder="Prezime"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Kontakt broj</label>
+            <input
+              class="form__input form__input--contact"
+              placeholder="Kontakt"
+            />
+            
+          </div>
+          <button class="form__btn">OK</button>
+        </form>
+      <div>
+        <p class="copyright time">Vrijeme: </p>
+        <p class="copyright date">Datum: </p>
+        <p class="copyright lat">Zemljopisna Širina: </p>
+        <p class="copyright lng">Zemljopisna dužina: </p>
+      </div>
+      </ul>
+      
+      <p class="copyright">
+        Aplikacija za prijavu požara.</br>
+        © Anđelo Jakoliš
+      </p>
+      
+    </div>
+
+    <div id="map"></div>
+  </body>
+</html>
